@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="xslt.xsl"?>
+<!--music.xml-->
+<!--author: Jonathan Godley (c3188072)-->
+<!--date: 30/10/15-->
+<!DOCTYPE categories
+[
+	<!ELEMENT categories (category)>
+	<!ELEMENT category (channel+)>
+	
+	<!ATTLIST category name (Music  |  Comedy | Film_and_Entertainment | Gaming | Beauty_and_Fashion | Automotive | Animation | Sports | Tech | Science_and_Education | Cooking_and_Health | News_and_Politics) #REQUIRED>
+	
+	<!ELEMENT channel (name, logo?, profile_photo, trailer?, URL, description, owner, relURL*, similar_channels*, subscribers)> 
+	
+	<!ATTLIST channel ad_period (1_month_free|3_months|6_months|1_year) #REQUIRED>
+	<!ATTLIST channel payment_type (bank_transfer|credit_card|paypal) #REQUIRED>
+	<!ATTLIST channel restricted_mode (on|off) #REQUIRED>
+	
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT logo (#PCDATA)>
+	<!ELEMENT profile_photo (#PCDATA)>
+	<!ELEMENT trailer (#PCDATA)>
+	<!ELEMENT URL (#PCDATA)>
+	<!ELEMENT description (#PCDATA)>
+	<!ELEMENT relURL (#PCDATA)>
+	<!ELEMENT similar_channels (#PCDATA)>
+	<!ELEMENT subscribers (#PCDATA)>	
+	
+	<!ELEMENT owner (owner_name,email+,address,owner_photo?,equipment*)>
+	<!ELEMENT email (#PCDATA)>	
+	<!ELEMENT owner_photo (#PCDATA)>
+	<!ELEMENT equipment (#PCDATA)>
+	
+	<!ELEMENT owner_name (firstname,surname)>
+	<!ELEMENT firstname (#PCDATA)>
+	<!ELEMENT surname (#PCDATA)>
+	
+	<!ELEMENT address (street_no,street,suburb,state?,postcode,country)>
+	<!ELEMENT street_no (#PCDATA)>
+	<!ELEMENT street (#PCDATA)>
+	<!ELEMENT suburb (#PCDATA)>
+	<!ELEMENT state (#PCDATA)>
+	<!ELEMENT postcode (#PCDATA)>
+	<!ELEMENT country (#PCDATA)>
+]> 
+<categories>
+	<category name="Music">
+		<channel restricted_mode="off" payment_type="credit_card" ad_period="1_month_free">
+			<name>Guitar Solos</name>
+			<profile_photo>/images/Guitar_Solos.png</profile_photo>
+			<URL>https://www.youtube.com/user/GuitarSolos</URL>
+			<description>A collection of famous Guitar Solos</description>
+			<owner>
+				<owner_name>
+					<firstname>Rodrigo</firstname>
+					<surname>Riviera</surname>
+				</owner_name>
+				<email>rodrigo@fakeguitarsolos.com.</email>
+				<address>
+					<street_no>4</street_no>
+					<street>Calle de las Maldonadas</street>
+					<suburb>Madrid</suburb>
+					<postcode>28005</postcode>
+					<country>Spain</country>
+				</address>
+				<owner_photo>/images/Guitar_Solos_OP.png</owner_photo>
+				<equipment>Fender Stratocaster</equipment>
+			</owner>
+			<relURL>https://www.youtube.com/user/GuitarSolos/playlists</relURL>
+			<similar_channels>DrumSolos, Famous Triangle Solos, TrumpetMasterclass5000</similar_channels>
+			<subscribers>530</subscribers>
+		</channel>
+		<channel restricted_mode="off" payment_type="bank_transfer" ad_period="6_months">
+			<name>Famous Triangle Solos</name>
+			<logo>/images/FT_Solos_logo.png</logo>
+			<profile_photo>/images/FT_Solos_prof_pic.png</profile_photo>
+			<trailer>https://www.youtube.com/watch?v=dQw4w9WgXcQ</trailer>
+			<URL>https://www.youtube.com/channel/UC38IQsAvIsxxjztdMZQtwHA</URL>
+			<description>Triangle-Centred remakes of famous musical history</description>
+			<owner>
+				<owner_name>
+					<firstname>Rick</firstname>
+					<surname>Virtanen</surname>
+				</owner_name>
+				<email>virtanen@rickvirtanen.org.fi</email>
+				<address>
+					<street_no>9</street_no>
+					<street>Lapinlahdenkatu </street>
+					<suburb>Helsinki</suburb>
+					<postcode>00180</postcode>
+					<country>Finland</country>
+				</address>
+				<owner_photo>/images/FT_Solos_owner_pic.png</owner_photo>
+			</owner>
+			<relURL>https://www.youtube.com/watch?v=y6120QOlsfU</relURL>
+			<subscribers>96423621</subscribers>
+		</channel>
+		<channel restricted_mode="on" payment_type="paypal" ad_period="1_year">
+			<name>Piano Lessons</name>
+			<logo>/images/Piano_Lessons_logo.png</logo>
+			<profile_photo>/images/Piano_Lessons_profile_pic.png</profile_photo>
+			<URL>https://www.youtube.com/user/PianoLessons</URL>
+			<description>Comprehensive and easy to follow Piano Lessons</description>
+			<owner>
+				<owner_name>
+					<firstname>Mark</firstname>
+					<surname>Fitzsimmons</surname>
+				</owner_name>
+				<email>mark@pianolessons.com</email>
+				<address>
+					<street_no>2</street_no>
+					<street>Newcastle Road</street>
+					<suburb>New Lampton</suburb>
+					<state>NSW</state>
+					<postcode>2102</postcode>
+					<country>Australia</country>
+				</address>
+			</owner>
+			<similar_channels>Guitar Lessons,TriangleLessons</similar_channels>
+			<subscribers>265002</subscribers>
+		</channel>
+	</category>
+</categories>

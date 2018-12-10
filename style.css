@@ -1,0 +1,215 @@
+/* style.css
+ * author: Jonathan Godley (c3188072)
+ * date: date: 30/10/15
+ */
+html /* This was necessary for the footer to stay attached to the bottom of the screen */
+{
+	height:100%
+}
+body
+{ 
+	margin:0;
+	margin-left:1cm; /* this created the margin for the text, but also created an aesthetic appeal by effecting the header and footer at the same time */
+	margin-right:1cm;
+	font-size:0; /* setting the font size to 0 eliminated several white space issues, although it's a cheap way of fixing them */
+	background-image: url('images/subtle_stripes.png'); /* courtesy of http://subtlepatterns.com/ */
+	padding:0;
+	height:100%;
+	font-family: "Calibri"
+}
+section 
+{
+	min-height:100%;
+	position:relative;
+}
+header
+{
+	width:100%;
+	height:100px;
+	background:grey;		
+}
+header img
+{
+	margin:0px auto;
+	display:block;
+	height:100px;
+	width:auto
+}
+nav
+{
+	width:100%;
+	height:50px;
+	background:lightgrey;
+}
+nav ul 
+{
+	padding-top: 15px; /* to move the links to the centre of the bar */
+	text-align: center;
+}
+a.navbarlink 
+{ 
+	text-decoration: none; /* class attribute and a CSS .xxx selector  */
+	padding-right: 10px; 
+	font-size: medium;
+}
+nav li { display: inline; }
+a.navbarlink:hover /* this achieved the effect of the link becoming bigger on mouse over*/
+{ 
+	text-decoration: none;
+	padding-right: 10px;
+	font-size:large
+}
+main
+{
+	font-size:medium;
+	padding-bottom:50px; /* Height of the footer element */
+}
+.important {font-style:italic;color:#006;} /* span */
+main h1 
+{
+	text-align:center;
+	font-size:200%;
+	text-transform:uppercase;
+}
+main h2 
+{
+	text-transform:uppercase;	
+	text-decoration: underline;
+}
+#categories  /* div to contain the categories in an aesthetic manner */ 
+{
+	background:lightgray;
+	border-radius:20px; /* css3 property - rounded edges*/
+	padding: 20px;
+	width: 75%;
+	margin-left:auto; /* to centre the div in the centre of the page*/
+	margin-right:auto;
+	margin-bottom: 25px; /* to create a gap between the box & footer */
+
+} 
+#categories h2 
+{
+	text-shadow: 0 1px 0 black, 0 -1px 0 black, 1px 0 0 black, -1px 0 0 black; /* css3 property - text shadows - learned from http://code.tutsplus.com/tutorials/10-css3-properties-you-need-to-be-familiar-with--net-16417 */
+	color: white; 
+	text-align:center;
+	text-decoration: underline;
+}
+#categories h3 
+{
+	text-shadow: 0 1px 0 black, 0 -1px 0 black, 1px 0 0 black, -1px 0 0 black; /* css3 property */
+	color: white; 
+}
+#categories img
+{
+	height:auto;
+	width:100px; /* using a fixed width w/ auto height allowed a uniform layout once padding was applied at the list level */
+	float:left; 
+	padding:0px;
+	padding-right:65px; /* this moved the actual dot points to the right away from the centre of the images */
+}
+#categories li {padding-bottom:65px;}
+footer
+{	
+	position:absolute; /* absolute was used to make the footer independent of other elements for the most part */
+	bottom:0;
+	left:0;
+	width: 100%;
+	height:50px;
+	background:grey;
+}
+footer p
+{
+	color:white;
+	padding-right:10px;
+	font-size: medium;
+	text-align:right;
+}
+footer a 
+{
+	color:black
+}
+p.introduction {font-size:larger;}
+strong {text-decoration: underline;}
+blockquote 
+{
+	font-style: italic;
+	font-size: large;
+	text-align:center;
+}
+em{text-decoration: underline;}
+.star {color:GoldenRod}
+#dataentry  /* div to contain the dataentry in an aesthetic manner */ 
+{
+	background:lightgray;
+	border-radius:20px; /* css3 property - rounded edges*/
+	padding: 20px;
+	width: 75%;
+	margin-left:auto; /* to centre the div in the centre of the page*/
+	margin-right:auto;
+	margin-bottom: 25px; /* to create a gap between the box & footer */
+	text-align:center;
+
+} 
+#dataentry h2 
+{
+	text-shadow: 0 1px 0 black, 0 -1px 0 black, 1px 0 0 black, -1px 0 0 black; /* css3 property - text shadows - learned from http://code.tutsplus.com/tutorials/10-css3-properties-you-need-to-be-familiar-with--net-16417 */
+	color: white; 
+	text-align:center;
+	text-decoration: underline;
+}
+#dataentry h3 
+{
+	text-shadow: 0 1px 0 black, 0 -1px 0 black, 1px 0 0 black, -1px 0 0 black; /* css3 property */
+	color: white; 
+}
+#dataentry img
+{
+	height:auto;
+	width:100px; /* using a fixed width w/ auto height allowed a uniform layout once padding was applied at the list level */
+	float:left; 
+	padding:0px;
+	padding-right:65px; /* this moved the actual dot points to the right away from the centre of the images */
+}
+#dataentry li {padding-bottom:65px;}
+#address label{
+    display: inline-block;
+    width:90px;
+    text-align: right;
+}
+#alignedlabel label{
+    display: inline-block;
+    width:110px;
+    text-align: left;
+}
+#showcase  /* div to contain the showcase in an aesthetic manner */ 
+{
+	background:lightgray;
+	border-radius:20px; /* css3 property - rounded edges*/
+	padding: 20px;
+	width: 75%;
+	margin-left:auto; /* to centre the div in the centre of the page*/
+	margin-right:auto;
+	margin-bottom: 25px; /* to create a gap between the box & footer */
+
+} 
+#showcase h2 
+{
+	text-shadow: 0 1px 0 black, 0 -1px 0 black, 1px 0 0 black, -1px 0 0 black; /* css3 property - text shadows - learned from http://code.tutsplus.com/tutorials/10-css3-properties-you-need-to-be-familiar-with--net-16417 */
+	color: white; 
+	text-align:center;
+	text-decoration: underline;
+}
+#showcase h3 
+{
+	text-shadow: 0 1px 0 black, 0 -1px 0 black, 1px 0 0 black, -1px 0 0 black; /* css3 property */
+	color: white; 
+}
+#showcase img
+{
+	height:auto;
+	width:100px; /* using a fixed width w/ auto height allowed a uniform layout once padding was applied at the list level */
+	margin:10px;
+	float:right;
+	
+}
+#showcase li {padding-bottom:65px;}

@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--template.xml-->
+<!--author: Jonathan Godley (c3188072)-->
+<!--date: 30/10/15-->
+<!DOCTYPE categories
+[
+	<!ELEMENT categories (category)>
+	<!ELEMENT category (channel+)>
+	
+	<!ATTLIST category name (Music  |  Comedy | Film_and_Entertainment | Gaming | Beauty_and_Fashion | Automotive | Animation | Sports | Tech | Science_and_Education | Cooking_and_Health | News_and_Politics) #REQUIRED>
+	
+	<!ELEMENT channel (name, logo?, profile_photo, trailer?, URL, description, owner, relURL*, similar_channels*, subscribers)> 
+	
+	<!ATTLIST channel ad_period (1_month_free|3_months|6_months|1_year) #REQUIRED>
+	<!ATTLIST channel payment_type (bank_transfer|credit_card|paypal) #REQUIRED>
+	<!ATTLIST channel restricted_mode (on|off) #REQUIRED>
+	
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT logo (#PCDATA)>
+	<!ELEMENT profile_photo (#PCDATA)>
+	<!ELEMENT trailer (#PCDATA)>
+	<!ELEMENT URL (#PCDATA)>
+	<!ELEMENT description (#PCDATA)>
+	<!ELEMENT relURL (#PCDATA)>
+	<!ELEMENT similar_channels (#PCDATA)>
+	<!ELEMENT subscribers (#PCDATA)>	
+	
+	<!ELEMENT owner (owner_name,email+,address,owner_photo?,equipment*)>
+	<!ELEMENT email (#PCDATA)>	
+	<!ELEMENT owner_photo (#PCDATA)>
+	<!ELEMENT equipment (#PCDATA)>
+	
+	<!ELEMENT owner_name (firstname,surname)>
+	<!ELEMENT firstname (#PCDATA)>
+	<!ELEMENT surname (#PCDATA)>
+	
+	<!ELEMENT address (street_no,street,suburb,state?,postcode,country)>
+	<!ELEMENT street_no (#PCDATA)>
+	<!ELEMENT street (#PCDATA)>
+	<!ELEMENT suburb (#PCDATA)>
+	<!ELEMENT state (#PCDATA)>
+	<!ELEMENT postcode (#PCDATA)>
+	<!ELEMENT country (#PCDATA)>
+]> 
+<categories>
+	<category name="Music">
+		<channel restricted_mode="on" payment_type="bank_transfer" ad_period="1_month_free">
+			<name />
+			<logo />
+			<profile_photo />
+			<trailer />
+			<URL />
+			<description />
+			<owner>
+				<owner_name>
+					<firstname />
+					<surname />
+				</owner_name>
+				<email />
+				<address>
+					<street_no />
+					<street />
+					<suburb />
+					<state />
+					<postcode />
+					<country />
+				</address>
+				<owner_photo />
+				<equipment />
+			</owner>
+			<relURL />
+			<similar_channels />
+			<subscribers />
+		</channel>
+	</category>
+</categories>

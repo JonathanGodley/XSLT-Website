@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="xslt.xsl"?>
+<!--gaming.xml-->
+<!--author: Jonathan Godley (c3188072)-->
+<!--date: 30/10/15-->
+<!DOCTYPE categories
+[
+	<!ELEMENT categories (category)>
+	<!ELEMENT category (channel+)>
+	
+	<!ATTLIST category name (Music  |  Comedy | Film_and_Entertainment | Gaming | Beauty_and_Fashion | Automotive | Animation | Sports | Tech | Science_and_Education | Cooking_and_Health | News_and_Politics) #REQUIRED>
+	
+	<!ELEMENT channel (name, logo?, profile_photo, trailer?, URL, description, owner, relURL*, similar_channels*, subscribers)> 
+	
+	<!ATTLIST channel ad_period (1_month_free|3_months|6_months|1_year) #REQUIRED>
+	<!ATTLIST channel payment_type (bank_transfer|credit_card|paypal) #REQUIRED>
+	<!ATTLIST channel restricted_mode (on|off) #REQUIRED>
+	
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT logo (#PCDATA)>
+	<!ELEMENT profile_photo (#PCDATA)>
+	<!ELEMENT trailer (#PCDATA)>
+	<!ELEMENT URL (#PCDATA)>
+	<!ELEMENT description (#PCDATA)>
+	<!ELEMENT relURL (#PCDATA)>
+	<!ELEMENT similar_channels (#PCDATA)>
+	<!ELEMENT subscribers (#PCDATA)>	
+	
+	<!ELEMENT owner (owner_name,email+,address,owner_photo?,equipment*)>
+	<!ELEMENT email (#PCDATA)>	
+	<!ELEMENT owner_photo (#PCDATA)>
+	<!ELEMENT equipment (#PCDATA)>
+	
+	<!ELEMENT owner_name (firstname,surname)>
+	<!ELEMENT firstname (#PCDATA)>
+	<!ELEMENT surname (#PCDATA)>
+	
+	<!ELEMENT address (street_no,street,suburb,state?,postcode,country)>
+	<!ELEMENT street_no (#PCDATA)>
+	<!ELEMENT street (#PCDATA)>
+	<!ELEMENT suburb (#PCDATA)>
+	<!ELEMENT state (#PCDATA)>
+	<!ELEMENT postcode (#PCDATA)>
+	<!ELEMENT country (#PCDATA)>
+]> 
+<categories>
+	<category name="Gaming">
+		<channel restricted_mode="on" payment_type="credit_card" ad_period="3_months">
+			<name>CornSimulator3000</name>
+			<profile_photo>/images/cornsim_prof.png</profile_photo>
+			<URL>https://www.youtube.com/channel/UCTGbDM6lZnKFctFA5GOU0Kg</URL>
+			<description>Survive the Harvest!</description>
+			<owner>
+				<owner_name>
+					<firstname>John</firstname>
+					<surname>Davis</surname>
+				</owner_name>
+				<email>corn@cornsim.org</email>
+				<address>
+					<street_no>5</street_no>
+					<street>Darby Road</street>
+					<suburb>Tonytown</suburb>
+					<state>WA</state>
+					<postcode>6199</postcode>
+					<country>Australia</country>
+				</address>
+			</owner>
+			<subscribers>252032</subscribers>
+		</channel>
+		<channel restricted_mode="off" payment_type="bank_transfer" ad_period="6_months">
+			<name>Squeaker Central</name>
+			<profile_photo>/images/S_Central_prof.png</profile_photo>
+			<URL>www.youtube.com/user/MCSqueaker</URL>
+			<description>Central hub for up and coming Minecraft Streamers!</description>
+			<owner>
+				<owner_name>
+					<firstname>Jeremy</firstname>
+					<surname>Tosh</surname>
+				</owner_name>
+				<email>mcsqueaker@yahoo.com</email>
+				<address>
+					<street_no>23</street_no>
+					<street>Acapella Place</street>
+					<suburb>Marrickville</suburb>
+					<postcode>5321</postcode>
+					<country>Australia</country>
+				</address>
+			</owner>
+			<subscribers>46402</subscribers>
+		</channel>
+		<channel restricted_mode="off" payment_type="paypal" ad_period="1_year">
+			<name>WhiteNoiseOfficial</name>
+			<profile_photo>/images/WNO_profile.png</profile_photo>
+			<trailer>https://www.youtube.com/watch?v=1KaOrSuWZeM</trailer>
+			<URL>www.youtube.com/user/WHITENOISEofficial</URL>
+			<description>Check out the official development vid-blog for this up and coming Triple A title!</description>
+			<owner>
+				<owner_name>
+					<firstname>Freddy</firstname>
+					<surname>Wong</surname>
+				</owner_name>
+				<email>inbox@whiten.oise.com</email>
+				<address>
+					<street_no>52</street_no>
+					<street>Tullamarine Road</street>
+					<suburb>Frankston</suburb>
+					<state>Victoria</state>
+					<postcode>3199</postcode>
+					<country>Australia</country>
+				</address>
+			</owner>
+			<similar_channels>BrownNoteOfficial</similar_channels>
+			<subscribers>235</subscribers>
+		</channel>
+	</category>
+</categories>
